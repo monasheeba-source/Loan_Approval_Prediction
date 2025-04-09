@@ -8,8 +8,9 @@ from prediction import get_prediction #, ordinal_encoder
 import os
 
 
-model = joblib.load(r'gbm_model.joblib')
-
+#model = joblib.load(r'gbm_model.joblib')
+model_path = os.path.join(os.path.dirname(__file__), "gbm_model.joblib")
+model = joblib.load(model_path)
 
 st.set_page_config(page_title="Loan Approval Prediction App", page_icon= " ", layout="wide")
 
